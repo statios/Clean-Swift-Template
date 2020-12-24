@@ -1,6 +1,6 @@
 XCODE_USER_TEMPLATES_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File\ Templates
 
-TEMPLATES_DIR=/Users/stat/Workspace/Clean-Swift-Template/CleanSwift
+TEMPLATES_DIR=CleanSwift
 
 
 install:
