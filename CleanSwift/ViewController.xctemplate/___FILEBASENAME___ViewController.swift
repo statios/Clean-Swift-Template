@@ -1,6 +1,6 @@
 //___FILEHEADER___
 
-import KarrotUI
+import AsyncDisplayKit
 
 protocol ___VARIABLE_sceneName___DisplayLogic: class {
 
