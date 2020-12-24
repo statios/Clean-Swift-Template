@@ -1,4 +1,4 @@
-# Karrot Clean Swift Template
+# Clean Swift Template
 
 # Install
 To install the Karrot Clean Swift Xcode templates, run:
