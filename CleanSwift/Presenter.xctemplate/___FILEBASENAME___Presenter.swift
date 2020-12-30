@@ -12,7 +12,6 @@ final class ___VARIABLE_sceneName___Presenter: BasePresenter {
 
 }
 
-
 // MARK: - Present
 extension ___VARIABLE_sceneName___Presenter: ___VARIABLE_sceneName___PresentationLogic {
   

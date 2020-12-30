@@ -18,9 +18,7 @@ final class ___VARIABLE_sceneName___Interactor: BaseInteractor, ___VARIABLE_scen
 
 }
 
-
 // MARK: - Business Logic
-
 extension ___VARIABLE_sceneName___Interactor: ___VARIABLE_sceneName___BusinessLogic {
 
 }
