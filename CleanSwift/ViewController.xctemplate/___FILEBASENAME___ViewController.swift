@@ -1,6 +1,9 @@
 //___FILEHEADER___
 
 import AsyncDisplayKit
+import Resolver
+import RxSwift
+import RxCocoa
 
 protocol ___VARIABLE_sceneName___DisplayLogic: class {
 
@@ -8,33 +11,25 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class {
 
 final class ___VARIABLE_sceneName___ViewController: BaseASViewController {
 
-  // MARK: VIP
-
-  var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
-  var interactor: ___VARIABLE_sceneName___BusinessLogic?
-
-  // MARK: Configuring
+  @Injected var interactor: ___VARIABLE_sceneName___BusinessLogic?
+  @Injected var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)
   
   override func configure() {
-    super.configure()
-    let viewController = self
-    let interactor = ___VARIABLE_sceneName___Interactor()
-    let presenter = ___VARIABLE_sceneName___Presenter()
-    let router = ___VARIABLE_sceneName___Router()
-
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    interactor.worker = ___VARIABLE_sceneName___Worker()
-    presenter.view = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
+    if let router = router as? ___VARIABLE_sceneName___Router,
+       let interactor = interactor as? ___VARIABLE_sceneName___Interactor,
+       let presenter = interactor.presenter as? ___VARIABLE_sceneName___Presenter {
+      router.viewController = self
+      presenter.viewController = self
+    }
   }
 }
 
+// MARK: - Request
+extension ___VARIABLE_sceneName___ViewController {
+  
+}
 
-// MARK: - Display Logic
-
+// MARK: - Display
 extension ___VARIABLE_sceneName___ViewController: ___VARIABLE_sceneName___DisplayLogic {
 
 }
