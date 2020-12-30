@@ -14,6 +14,10 @@ final class ___VARIABLE_sceneName___ViewController: BaseASViewController {
   @Injected var interactor: ___VARIABLE_sceneName___BusinessLogic?
   @Injected var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)
   
+}
+
+// MARK: - Configure
+extension ___VARIABLE_sceneName___ViewController {
   override func configure() {
     if let router = router as? ___VARIABLE_sceneName___Router,
        let interactor = interactor as? ___VARIABLE_sceneName___Interactor,

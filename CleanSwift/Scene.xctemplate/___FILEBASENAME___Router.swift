@@ -29,7 +29,7 @@ extension ___VARIABLE_sceneName___Router: ResolverRegistering {
   static func registerAllServices() {
     Resolver.register { ___VARIABLE_sceneName___Interactor() }
       .implements(___VARIABLE_sceneName___DataStore.self)
-      .implements(___VARIABLE_sceneName___BuisinessLogic.self)
+      .implements(___VARIABLE_sceneName___BusinessLogic.self)
       .scope(Resolver.shared)
     Resolver.register { ___VARIABLE_sceneName___Router() }
       .implements((___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing).self)
