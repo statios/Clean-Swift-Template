@@ -11,7 +11,7 @@ protocol ___VARIABLE_sceneName___DisplayLogic: class {
 
 final class ___VARIABLE_sceneName___ViewController: BaseASViewController {
 
-  @Injected var interactor: ___VARIABLE_sceneName___BusinessLogic?
+  @Injected var interactor: ___VARIABLE_sceneName___BusinessLogic
   @Injected var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)
   
 }

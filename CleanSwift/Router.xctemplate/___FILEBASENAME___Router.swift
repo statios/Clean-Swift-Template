@@ -18,7 +18,6 @@ final class ___VARIABLE_sceneName___Router: BaseRouter, ___VARIABLE_sceneName___
 
 }
 
-
 // MARK: - Route
 extension ___VARIABLE_sceneName___Router: ___VARIABLE_sceneName___RoutingLogic {
 
