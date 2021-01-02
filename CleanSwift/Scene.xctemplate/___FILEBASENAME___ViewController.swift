@@ -28,6 +28,13 @@ extension ___VARIABLE_sceneName___ViewController {
   }
 }
 
+// MARK: - Layout
+extension ___VARIABLE_sceneName___ViewController {
+  override func layoutSpec(node: ASDisplayNode, size: ASSizeRange) -> ASLayoutSpec {
+    return ASLayoutSpec()
+  }
+}
+
 // MARK: - Request
 extension ___VARIABLE_sceneName___ViewController {
   

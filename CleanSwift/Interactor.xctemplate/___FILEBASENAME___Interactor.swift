@@ -14,7 +14,7 @@ protocol ___VARIABLE_sceneName___BusinessLogic: class {
 final class ___VARIABLE_sceneName___Interactor: BaseInteractor, ___VARIABLE_sceneName___DataStore {
 
 //  var worker: ___VARIABLE_sceneName___WorkerLogic?
-  @Injected var presenter: ___VARIABLE_sceneName___PresentationLogic?
+  @Injected var presenter: ___VARIABLE_sceneName___PresentationLogic
 
 }
 
