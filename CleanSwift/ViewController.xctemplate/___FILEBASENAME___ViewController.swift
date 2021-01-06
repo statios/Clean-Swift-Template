@@ -19,12 +19,11 @@ final class ___VARIABLE_sceneName___ViewController: BaseASViewController {
 // MARK: - Configure
 extension ___VARIABLE_sceneName___ViewController {
   override func configure() {
-    if let router = router as? ___VARIABLE_sceneName___Router,
-       let interactor = interactor as? ___VARIABLE_sceneName___Interactor,
-       let presenter = interactor.presenter as? ___VARIABLE_sceneName___Presenter {
-      router.viewController = self
-      presenter.viewController = self
-    }
+    guard let router = router as? ___VARIABLE_sceneName___Router,
+          let interactor = interactor as? ___VARIABLE_sceneName___Interactor,
+          let presenter = interactor.presenter as? ___VARIABLE_sceneName___Presenter else { return }
+    router.viewController = self
+    presenter.viewController = self
   }
 }
 
