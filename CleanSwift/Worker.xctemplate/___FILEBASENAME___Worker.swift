@@ -6,8 +6,10 @@ protocol ___VARIABLE_sceneName___WorkerLogic {
 
 }
 
-final class ___VARIABLE_sceneName___Worker: BaseWorker, ___VARIABLE_sceneName___WorkerLogic {
-  func doSomeWork() {
+final class ___VARIABLE_sceneName___Worker: BaseWorker {
+  
+}
 
-  }
+extension ___VARIABLE_sceneName___Worker: ___VARIABLE_sceneName___WorkerLogic {
+  
 }

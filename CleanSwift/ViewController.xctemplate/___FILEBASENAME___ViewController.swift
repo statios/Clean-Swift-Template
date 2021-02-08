@@ -1,42 +1,35 @@
 //___FILEHEADER___
 
-import AsyncDisplayKit
-import Resolver
-import RxSwift
-import RxCocoa
+import UIKit
 
 protocol ___VARIABLE_sceneName___DisplayLogic: class {
 
 }
 
-final class ___VARIABLE_sceneName___ViewController: BaseASViewController {
+final class ___VARIABLE_sceneName___ViewController: BaseViewController {
 
-  @Injected var interactor: ___VARIABLE_sceneName___BusinessLogic
-  @Injected var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)
+  var router: (___VARIABLE_sceneName___RoutingLogic & ___VARIABLE_sceneName___DataPassing)?
+  var interactor: ___VARIABLE_sceneName___BusinessLogic?
   
 }
 
 // MARK: - Configure
 extension ___VARIABLE_sceneName___ViewController {
-  override func configure() {
-    guard let router = router as? ___VARIABLE_sceneName___Router,
-          let interactor = interactor as? ___VARIABLE_sceneName___Interactor,
-          let presenter = interactor.presenter as? ___VARIABLE_sceneName___Presenter else { return }
-    router.viewController = self
-    presenter.viewController = self
+  override func build() {
+    let viewController = self
+    let interactor = ___VARIABLE_sceneName___Interactor()
+    let presenter = ___VARIABLE_sceneName___Presenter()
+    let router = ___VARIABLE_sceneName___Router()
+    let worker = ___VARIABLE_sceneName___Worker()
+    
+    interactor.presenter = presenter
+    interactor.worker = worker
+    presenter.view = viewController
+    router.viewController = viewController
+    router.dataStore = interactor
+    viewController.interactor = interactor
+    viewController.router = router
   }
-}
-
-// MARK: - Layout
-extension ___VARIABLE_sceneName___ViewController {
-  override func layoutSpec(node: ASDisplayNode, size: ASSizeRange) -> ASLayoutSpec {
-    return ASLayoutSpec()
-  }
-}
-
-// MARK: - Request
-extension ___VARIABLE_sceneName___ViewController {
-  
 }
 
 // MARK: - Display
